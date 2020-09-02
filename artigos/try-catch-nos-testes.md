@@ -28,14 +28,14 @@ it('should throw error of invalid user name if it is null', () => {
 })
 ```
 
-Outro exemplo utilizando [ava](https://github.com/avajs/ava)
+Outro exemplo utilizando [Java](https://github.com/avajs/ava)
 
 ```javascript
 await t.throwsAsync( async () => {
     const error = await validateUser({ name: null }, validateUserName())
     // a expectativa é que seja lançado o erro de invalid user name
     t.is(error.name, 'ValidationError')
-  }, { message: `invalid user name`})
+  }, { message: 'invalid user name'})
 ```
 
 Então sempre que possível procure utilizar os recursos do próprio framework de testes para lidar com o lançamento de exceções ao invés de utilizar try/catch.
